@@ -2,7 +2,7 @@
 
     <nav class="navbar navbar-expand-lg px-4" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand mb-0 h1 me-5" href="#"><h2>Giorgio Bolzoni</h2></a>
+            <a class="navbar-brand mb-0 h1 me-5" href="#"><h2 class="fw-bold">Giorgio Bolzoni</h2></a>
             <div id="menu">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,4 +60,5 @@
             color: var(--saffron) !important;
         }
     }
+    
  </style>
