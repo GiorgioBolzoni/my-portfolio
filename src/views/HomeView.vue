@@ -11,12 +11,15 @@
 
   <footer class="p-4 text-center d-flex align-items-center justify-content-around">
     <section id="logos" class="d-flex justify-content-center align-items-center py-3">
-      <img src="/img/github-logo.png" alt="logo-github" class="rounded-circle">
-      <img src="/img/linkedin-svgrepo-com.svg" alt="logo-linkedin" class="rounded-3" id="linkedin-logo">
+      <a href=""><img src="/img/github-logo.png" alt="logo-github" class="rounded-circle"></a>
+      <a href="http://www.linkedin.com/in/giorgio-bolzoni"><img src="/img/linkedin-svgrepo-com.svg" alt="logo-linkedin" class="rounded-3" id="linkedin-logo"></a>
       <img src="/img/cv-logo.png" alt="logo-cv" class="rounded-circle">
     </section>
-    <p class="py-3" id="email">Email: <a class="mx-3">gbolzoni96@gmail.com</a></p>
+    <p class="py-3 d-flex align-items-center" id="email"><i class="fa-regular fa-envelope fs-4" style="color: #ffffff;"></i> <a class="mx-3">gbolzoni96@gmail.com</a></p>
   </footer>
+  <div class="text-center copyright pb-4">
+                © 2024 Giorgio Bolzoni - All Rights Reserved.
+            </div>
 </template>
 
 <script>
@@ -109,7 +112,9 @@ footer{
     }
   }
 }
-
+.copyright{
+  color: var(--light-platinum);
+}
 
 
 // MEDIA QUERY:

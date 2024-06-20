@@ -9,17 +9,22 @@
 
     <section id="skills" class="my-4">
       <h4 class="fw-bold">Skills</h4>
-
+      <SkillsCarousel />
     </section>
   </div>
 </template>
 
 <script>
+import SkillsCarousel from "../components/SkillsCarousel.vue"
+
 export default {
-        name:'AboutView',
-}
+  name: 'AboutView',
+  components:{
+    SkillsCarousel,
+  }
+};
 </script>
 
-<style>
+<style scoped>
 
 </style>
