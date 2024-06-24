@@ -5,7 +5,7 @@
     <HomeView><router-view></router-view></HomeView>
   
   
-  <AppFooter></AppFooter>
+  <AppFooter id="contacts"></AppFooter>
 </template>
 
 <script>

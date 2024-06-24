@@ -7,14 +7,14 @@
     <li><button>Back End</button></li>
     <li><button>Full Stack</button></li>
   </ul>
-  <div class="projects-container">
-      <div v-for="(project, index) in projects" :key="index" class="card m-2">
-        <img :src="project.src" :alt="project.alt" class="project-img"/>
-        <div class="card-body">
-          <h5 class="card-title fw-bold">{{ project.name }}</h5>
-        </div>
+  <div class="projects-container row">
+    <div v-for="(project, index) in projects" :key="index" class="card m-2 col-lg-3 col-sm-4 col-8">
+      <img :src="project.src" :alt="project.alt" class="project-img"/>
+      <div class="card-body">
+        <h5 class="card-title fw-bold">{{ project.name }}</h5>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -26,6 +26,7 @@
           {name: 'Spotify Web', stack: 'Front End', src: '/img/spotify.png', alt: 'spotify_img'},
           {name: 'Whatsapp', stack: 'Front End', src: '/img/whatsapp.png', alt: 'whatsapp_img'},
           {name: 'Comics', stack: 'Front End', src: '/img/comics.png', alt: 'comics_img'},
+          {name: 'Netflix', stack: 'Front End', src: '/img/boolflix.jpg', alt: 'boolflix_img'},
         ]
       }
     }
@@ -36,20 +37,23 @@
  @use '../assets/style/partials/variables.scss' as *;
 
   button{
-    background-color: var(--black-ff);
+    background-color: black;
     border: 3px solid var(--saffron);
     margin: 5px;
     width: 150px;
-    color: var(--e5e5e5ff);
+    color: var(--alabaster);
     border-radius: 10px;
     padding: 5px;
     font-weight: bold;
 
     &:hover{
       background-color: var(--saffron);
-      color: var(--black-ff);
-      border-color: var(--black-ff);
+      color: black;
+      border-color: black;
     }
+
+
+
   }
   .projects-container {
   display: flex;
@@ -59,14 +63,16 @@
 }
 
 .card {
-  width: 300px;
   border: 1px solid transparent;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 2px 2px 8px var(--saffron);
   text-align: center;
-  background-color: var(--oxford-blue);
+  background-color: black;
   cursor: pointer;
+  padding: 0;
+  min-width: 200px;
+
 
   &:hover {
     transform: scale(1.15);

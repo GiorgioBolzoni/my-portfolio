@@ -1,5 +1,5 @@
 <template>
-<footer>
+<footer id="contacts">
     <div class="p-4 text-center d-flex align-items-center justify-content-around">
     <section id="logos" class="d-flex justify-content-center align-items-center py-3">
       <a href=""><img src="/img/github-logo.png" alt="logo-github" class="rounded-circle"></a>
@@ -28,8 +28,8 @@
  <style lang="scss" scoped>
  @use '../assets/style/partials/variables' as *;
  footer{
-  background-color: var(--black-ff);
-  color: var(--light-platinum);
+  background-color: black;
+  color: var(--e8eddfff);
   
 }
 #logos{

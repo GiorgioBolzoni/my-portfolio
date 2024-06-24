@@ -19,9 +19,22 @@ const router = createRouter({
     {
       path: '/projects',
       name: 'projects',
-      component: AppProjects, 
+      component: AppProjects,
     }
   ]
-})
+});
+
+// Aggiungi comportamento di scroll dolce per hash
+router.afterEach((to, from) => {
+  const sectionId = to.hash;
+  if (sectionId) {
+    setTimeout(() => {
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Ritarda per assicurare che il DOM sia aggiornato
+  }
+});
 
 export default router;
