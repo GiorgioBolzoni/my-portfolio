@@ -30,6 +30,7 @@
  footer{
   background-color: var(--black-ff);
   color: var(--light-platinum);
+  
 }
 #logos{
 

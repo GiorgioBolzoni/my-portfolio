@@ -38,7 +38,6 @@ export default {
  @use '../assets/style/partials/variables.scss' as *;
 main{
   background-color: var(--eerie-black);
-  height: 100vh;
   padding: 80px;
   color: var(--light-platinum);
 }
