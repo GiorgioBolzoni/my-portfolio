@@ -20,7 +20,7 @@
                 <router-link class="nav-link" :to="{ path: '/', hash: '#projects' }">Projects</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" :to="{ path: '/', hash: '#contacts' }">Contact</router-link>
+                <router-link class="nav-link" :to="{ path: '/', hash: '#contacts' }">Contacts</router-link>
               </li>
             </ul>
           </div>
