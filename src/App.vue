@@ -2,21 +2,25 @@
   <AppHeader id="headerApp"></AppHeader>
 
   
-    <HomeView></HomeView>
+    <HomeView><router-view></router-view></HomeView>
   
+  
+  <AppFooter></AppFooter>
 </template>
 
 <script>
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
   
   import {store} from "./data/store";
   import AppHeader from './components/AppHeader.vue';
   import HomeView from './views/HomeView.vue';
+  import AppFooter from './components/AppFooter.vue';
 
   export default {
     components:{
       AppHeader,
       HomeView,
+      AppFooter,
     },
     data(){
       return{

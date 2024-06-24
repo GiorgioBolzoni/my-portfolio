@@ -114,7 +114,7 @@ export default{
 <style  lang="scss" scoped>
 .carousel-container {
     overflow: hidden;
-    width: 1000px; /* 200px * 5 */
+    width: 1000px; 
     margin: auto;
     cursor: grab;
   }
