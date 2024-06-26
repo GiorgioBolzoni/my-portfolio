@@ -14,7 +14,7 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "sass": "^1.77.6",
-    "vue": "^3.4.21",
+    "vue": "^3.4.30",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
