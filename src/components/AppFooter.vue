@@ -1,13 +1,13 @@
 <template>
 <footer id="contacts">
     <div class="p-4 text-center d-flex align-items-center justify-content-around">
-    <section id="logos" class="d-flex justify-content-center align-items-center py-3">
-      <a href=""><img src="/img/github-logo.png" alt="logo-github" class="rounded-circle"></a>
-      <a href="http://www.linkedin.com/in/giorgio-bolzoni"><img src="/img/linkedin-svgrepo-com.svg" alt="logo-linkedin" class="rounded-3" id="linkedin-logo"></a>
-      <img src="/img/cv-logo.png" alt="logo-cv" class="rounded-circle">
-    </section>
-    <p class="py-3 d-flex align-items-center" id="email"><i class="fa-regular fa-envelope fs-4" style="color: #ffffff;"></i> <a class="mx-3">gbolzoni96@gmail.com</a></p>
-  </div>
+      <section id="logos" class="d-flex justify-content-center align-items-center py-3">
+        <a href="https://github.com/GiorgioBolzoni"><img src="/img/github-logo.png" alt="logo-github" class="rounded-circle"></a>
+        <a href="http://www.linkedin.com/in/giorgio-bolzoni"><img src="/img/linkedin-svgrepo-com.svg" alt="logo-linkedin" class="rounded-3" id="linkedin-logo"></a>
+        <a href="https://drive.google.com/file/d/1ey1k3Bs23R0Hlwaf1Bp0Qqf7SKQKjiYW/view?usp=sharing"><img src="/img/cv-logo.png" alt="logo-cv" class="rounded-circle"></a>
+      </section>
+      <p class="py-3 d-flex align-items-center" id="email"><i class="fa-regular fa-envelope fs-4" style="color: #ffffff;"></i> <a class="mx-3">gbolzoni96@gmail.com</a></p>
+    </div>
     <div class="text-center copyright pb-4">
         © 2024 Giorgio Bolzoni - All Rights Reserved.
     </div>

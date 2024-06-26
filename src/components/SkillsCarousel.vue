@@ -40,6 +40,8 @@ export default{
         { src: '/img/laravel-logo.png', alt: 'laravel-logo' },
         { src: '/img/mysql-logo.png', alt: 'mysql-logo' },
         { src: '/img/phpmyadmin-logo.png', alt: 'phpmyadmin-logo' },
+        { src: '/img/react-logo.png', alt: 'react-logo' },
+        { src: '/img/tailwind-logo.png', alt: 'tailwind-logo' },
       ],
       currentStartIndex: 0,
       transitionStyle: 'transform 0.5s ease-in-out',

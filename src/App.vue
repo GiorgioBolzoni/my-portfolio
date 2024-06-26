@@ -1,11 +1,11 @@
 <template>
-  <AppHeader id="headerApp"></AppHeader>
+  <AppHeader class="rambla" id="headerApp"></AppHeader>
 
   
-    <HomeView><router-view></router-view></HomeView>
+    <HomeView class="rambla"><router-view></router-view></HomeView>
   
   
-  <AppFooter id="contacts"></AppFooter>
+  <AppFooter class="rambla" id="contacts"></AppFooter>
 </template>
 
 <script>

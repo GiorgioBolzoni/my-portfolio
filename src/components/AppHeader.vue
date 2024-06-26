@@ -1,33 +1,38 @@
 <template>
-    <nav class="navbar navbar-expand-lg px-4" data-bs-theme="dark">
-      <div class="container-fluid">
-        <router-link class="navbar-brand mb-0 h1 me-5" to="/">
-          <h2 class="fw-bold">Giorgio Bolzoni</h2>
-        </router-link>
-        <div id="menu">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ path: '/', hash: '#top' }">Home</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ path: '/', hash: '#about' }">About</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ path: '/', hash: '#projects' }">Projects</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" :to="{ path: '/', hash: '#contacts' }">Contacts</router-link>
-              </li>
-            </ul>
-          </div>
+  <nav class="navbar navbar-expand-lg px-4" data-bs-theme="dark">
+    <div class="container-fluid">
+      <router-link class="navbar-brand mb-0 h1 me-5" to="/">
+        <h2 class="fw-bold">Giorgio Bolzoni</h2>
+      </router-link>
+      <div class="img-container">
+        <img src="/img/duck.png" style="width: 100px;" alt="duck.png">
+        <div class="help-message">Per qualsiasi problema seleziona la voce del menù "Contacts", seleziona il metodo di contatto più comodo per te e sarò felice di aiutarti!</div>
+      </div>
+      <div id="menu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ path: '/', hash: '#top' }">Home</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ path: '/', hash: '#about' }">About</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ path: '/', hash: '#projects' }">Projects</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" :to="{ path: '/', hash: '#contacts' }">Contacts</router-link>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
-  </template>
+    </div>
+  </nav>
+</template>
+
   
   <script>
   export default {
@@ -37,25 +42,61 @@
   
   <style lang="scss" scoped>
   @use '../assets/style/partials/variables' as *;
-  
-  nav {
-    height: 80px;
-    background-color: black;
-    box-shadow: 0 1px 15px var(--saffron);
+
+nav {
+  height: 80px;
+  background-color: black;
+  box-shadow: 0 1px 15px var(--saffron);
+  color: var(--alabaster);
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  .navbar-brand {
     color: var(--alabaster);
-    position: fixed;
-    z-index: 1000;
-    width: 100vw;
-  
-    li:hover {
-      cursor: pointer;
+  }
+
+  li a:hover {
+    color: var(--saffron) !important;
+  }
+
+  .nav-link:focus {
+    color: var(--saffron) !important;
+    font-weight: bold;
+  }
+
+  .img-container {
+    position: relative;
+    display: inline-block;
+    cursor:help;
+
+    .help-message {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--saffron);
+      opacity: 80% !important;
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 10px rgb(0, 0, 0);
+      white-space: nowrap;
+      z-index: 1000;
+      transition: opacity 0.3s ease-in-out;
     }
-    .navbar-brand {
-      color: var(--alabaster);
-    }
-    li a:hover {
-      color: var(--saffron) !important;
+
+    &:hover .help-message {
+      display: block;
+      opacity: 1;
     }
   }
+}
+
   </style>
   

@@ -40,12 +40,13 @@ export default {
         {name: 'Deliveroo', stack: 'Full Stack', src: '/img/deliveboo.gif', alt: 'deliveboo.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/giuliamari04/Deliveboo', link2: 'https://github.com/leonardomastrangelo/laravel_deliveboo'},
         {name: 'Booleansgate', stack: 'Full Stack', src: '/img/booleansgate.gif', alt: 'booleansgate.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/Eecodev/vite-booleansgate', link2: 'https://github.com/giovannimegliola/booleansgate'},
         {name: 'Tic Tac Toe', stack: 'Front End', src: '/img/tris.gif', alt: 'tic-tac-toe.gif', technology: 'React | CSS', link: 'https://github.com/GiorgioBolzoni/02-tic-tac-toe-starting-project'},
+        {name: 'Project Management', stack: 'Front End', src: '/img/proj-management.gif', alt: 'proj-management.gif', technology: 'React | Tailwind', link: 'https://github.com/GiorgioBolzoni/06-projects-management-application'},
         {name: 'Gobike', stack: 'Front End', src: '/img/bike.gif', alt: 'gobike.gif', technology: 'Vue.js | Sass | Bootstrap | API', link: 'https://github.com/GiorgioBolzoni/proj-html-vuejs'},
         {name: 'Pokédex', stack: 'Front End', src: '/img/pokedex.gif', alt: 'pokedex.gif', technology: 'Vue.js | Sass | Bootstrap | Axios', link: 'https://github.com/GiorgioBolzoni/vue-pokedex'},
-        {name: 'Spotify Web', stack: 'Front End', src: '/img/spotify.png', alt: 'spotify_img', technology: 'HTML | CSS', link: 'https://github.com/GiorgioBolzoni/html-css-spotifyweb'},
+        {name: 'Spotify Web', stack: 'Front End', src: '/img/spotify.png', alt: 'spotify_img', technology: 'HTML | CSS', link: 'https://github.com/GiorgioBolzoni/html-css-spotifyweb'},        
+        {name: 'Netflix', stack: 'Front End', src: '/img/boolflix.gif', alt: 'boolflix.gif', technology: 'Vue.js | Vuex | API', link: 'https://github.com/GiorgioBolzoni/vite-boolflix'},
         {name: 'Whatsapp', stack: 'Front End', src: '/img/whatsapp.png', alt: 'whatsapp_img', technology: 'HTML | CSS | JavaScript', link: 'https://github.com/GiorgioBolzoni/vue-boolzapp'},
-        {name: 'Comics', stack: 'Back End', src: '/img/comics.png', alt: 'comics_img', technology: 'PHP | Laravel | Sass', link: 'https://github.com/GiorgioBolzoni/laravel-comics' },
-        {name: 'Netflix', stack: 'Front End', src: '/img/boolflix.gif', alt: 'boolflix.gif', technology: 'Vue.js | Vuex | API', link: 'https://github.com/GiorgioBolzoni/vite-boolflix'}
+        {name: 'Comics', stack: 'Back End', src: '/img/comics.png', alt: 'comics_img', technology: 'PHP | Laravel | Sass | API', link: 'https://github.com/GiorgioBolzoni/laravel-comics' },
       ],
       filter: ''
     }
