@@ -2,7 +2,7 @@
   <h3 class="text-center fw-bold">
     PROGETTI
   </h3>
-  <ul class="d-flex justify-content-center my-4">
+  <ul class="d-flex justify-content-center my-4 flex-wrap">
     <li><button @click="setFilter('')">All</button></li>
     <li><button @click="setFilter('Front End')">Front End</button></li>
     <li><button @click="setFilter('Back End')">Back End</button></li>
