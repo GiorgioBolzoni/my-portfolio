@@ -1,32 +1,34 @@
 <template>
   <div 
-        class="carousel-container my-4"
-        @mouseenter="pauseCarousel"
-        @mouseleave="resumeCarousel"
-        @mousedown="startDrag"
-        @touchstart="startDrag"
-        @touchmove="onDrag"
-        @touchend="endDrag"
-      >
-        <div 
-          class="carousel" 
-          :style="{ 
-            transform: `translateX(-${currentStartIndex * 200}px)`,
-            transition: transitionStyle
-          }"
-          @transitionend="handleTransitionEnd"
-        >
-          <div class="slide-carousel" v-for="(skill, index) in extendedSkills" :key="index">
-            <img :src="skill.src" :alt="skill.alt">
-          </div>
-        </div>
+    class="carousel-container my-4"
+    @mouseenter="pauseCarousel"
+    @mouseleave="resumeCarousel"
+    @mousedown="startDrag"
+    @touchstart="startDrag"
+    @touchmove="onDrag"
+    @touchend="endDrag"
+  >
+    <div 
+      class="carousel" 
+      :style="{ 
+        transform: `translateX(-${currentStartIndex * slideWidth}px)`,
+        transition: transitionStyle
+      }"
+      @transitionend="handleTransitionEnd"
+      ref="carousel"
+    >
+      <div class="slide-carousel" v-for="(skill, index) in extendedSkills" :key="index">
+        <img :src="skill.src" :alt="skill.alt">
       </div>
+    </div>
+  </div>
 </template>
 
+
 <script>
-export default{
-    name: 'SkillsCarousel',
-    data() {
+export default {
+  name: 'SkillsCarousel',
+  data() {
     return {
       skills: [
         { src: '/my-portfolio/img/html-logo.png', alt: 'html-logo' },
@@ -49,6 +51,8 @@ export default{
       isDragging: false,
       startX: 0,
       startScroll: 0,
+      slideWidth: 200, 
+      slidesPerView: 5, // Numero di slide visibili su schermi larghi
     };
   },
   computed: {
@@ -58,7 +62,7 @@ export default{
     extendedSkills() {
       return [
         ...this.skills,
-        ...this.skills.slice(0, 5) // Clone the first 5 skills to the end
+        ...this.skills.slice(0, 5) // Clona le prime slides alla fine per il loop
       ];
     },
   },
@@ -82,7 +86,7 @@ export default{
     startDrag(event) {
       this.isDragging = true;
       this.startX = event.clientX || event.touches[0].clientX;
-      this.startScroll = this.currentStartIndex * 200;
+      this.startScroll = this.currentStartIndex * this.slideWidth;
       this.transitionStyle = 'none';
       document.addEventListener('mousemove', this.onDrag);
       document.addEventListener('mouseup', this.endDrag);
@@ -91,7 +95,7 @@ export default{
       if (this.isDragging) {
         const dx = (event.clientX || event.touches[0].clientX) - this.startX;
         const newIndex = this.startScroll - dx;
-        this.currentStartIndex = newIndex / 200;
+        this.currentStartIndex = newIndex / this.slideWidth;
       }
     },
     endDrag() {
@@ -103,40 +107,77 @@ export default{
         document.removeEventListener('mouseup', this.endDrag);
       }
     },
+    updateSlideWidth() {
+      const containerWidth = this.$refs.carousel.offsetWidth;
+      if (containerWidth >= 1200) {
+        this.slidesPerView = 5;
+      } else if (containerWidth >= 768) {
+        this.slidesPerView = 2;
+      } else {
+        this.slidesPerView = 1;
+      }
+      this.slideWidth = containerWidth / this.slidesPerView;
+    },
   },
   mounted() {
+    this.updateSlideWidth();
     this.resumeCarousel();
+    window.addEventListener('resize', this.updateSlideWidth);
   },
   beforeDestroy() {
     clearInterval(this.interval);
+    window.removeEventListener('resize', this.updateSlideWidth);
   },
-}
+};
 </script>
 
-<style  lang="scss" scoped>
-.carousel-container {
-    overflow: hidden;
-    width: 1000px; 
-    margin: auto;
-    cursor: grab;
-  }
-  
-  .carousel {
-    display: flex;
-  }
 
-  .slide-carousel {
-    width: 200px;
-    height: 200px;
-    padding: 25px;
-    flex-shrink: 0;
-  }
-  
-  img {
-    width: 100%;
-    filter: drop-shadow(3px 3px 5px rgba(245, 203, 92, 0.5));
-  }
-  .carousel-container:active {
+<style lang="scss" scoped>
+.carousel-container {
+  overflow: hidden;
+  width: 100%; // Utilizza tutta la larghezza disponibile
+  margin: auto;
+  cursor: grab;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-carousel {
+  flex-shrink: 0;
+  padding: 20px; // Ridotto padding per adattarsi alla larghezza inferiore delle slide
+  box-sizing: border-box; // Considera il padding nel calcolo della larghezza
+  width: calc(100% / 5);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(3px 3px 5px rgba(245, 203, 92, 0.5));
+}
+
+.carousel-container:active {
   cursor: grabbing;
 }
+
+@media (max-width: 1200px) {
+  .slide-carousel {
+    width: calc(100% / 5); // Mostra 5 slide alla volta su schermi larghi
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-carousel {
+    width: calc(100% / 2); // Mostra 2 slide alla volta su schermi medi
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-carousel {
+    width: 100%; // Mostra 1 slide alla volta su schermi più piccoli
+  }
+}
 </style>
+

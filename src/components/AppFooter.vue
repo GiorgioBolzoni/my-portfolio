@@ -1,7 +1,7 @@
 <template>
 <footer id="contacts">
-    <div class="p-4 text-center d-flex align-items-center justify-content-around">
-      <section id="logos" class="d-flex justify-content-center align-items-center py-3">
+    <div class="p-4 text-center d-flex align-items-center justify-content-around flex-wrap">
+      <section id="logos" class="d-flex justify-content-center align-items-center py-3 flex-wrap">
         <a href="https://github.com/GiorgioBolzoni"><img src="/img/github-logo.png" alt="logo-github" class="rounded-circle"></a>
         <a href="http://www.linkedin.com/in/giorgio-bolzoni"><img src="/img/linkedin-svgrepo-com.svg" alt="logo-linkedin" class="rounded-3" id="linkedin-logo"></a>
         <a href="https://drive.google.com/file/d/1ey1k3Bs23R0Hlwaf1Bp0Qqf7SKQKjiYW/view?usp=sharing"><img src="/img/cv-logo.png" alt="logo-cv" class="rounded-circle"></a>
