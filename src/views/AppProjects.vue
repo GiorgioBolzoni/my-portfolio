@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       projects: [
-        {name: 'Deliveroo', stack: 'Full Stack', src: '/my-portfolio/img/deliveboo.png', alt: 'deliveboo.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/giuliamari04/Deliveboo', link2: 'https://github.com/leonardomastrangelo/laravel_deliveboo'},
+        {name: 'Deliveroo', stack: 'Full Stack', src: '/my-portfolio/img/deliveboo.gif', alt: 'deliveboo.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/giuliamari04/Deliveboo', link2: 'https://github.com/leonardomastrangelo/laravel_deliveboo'},
         {name: 'Booleansgate', stack: 'Full Stack', src: '/my-portfolio/img/booleansgate.gif', alt: 'booleansgate.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/Eecodev/vite-booleansgate', link2: 'https://github.com/giovannimegliola/booleansgate'},
         {name: 'Tic Tac Toe', stack: 'Front End', src: '/my-portfolio/img/tris.gif', alt: 'tic-tac-toe.gif', technology: 'React | CSS', link: 'https://github.com/GiorgioBolzoni/02-tic-tac-toe-starting-project'},
         {name: 'Project Management', stack: 'Front End', src: '/my-portfolio/img/proj-management.gif', alt: 'proj-management.gif', technology: 'React | Tailwind', link: 'https://github.com/GiorgioBolzoni/06-projects-management-application'},
