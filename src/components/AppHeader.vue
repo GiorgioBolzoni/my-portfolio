@@ -95,6 +95,12 @@ nav {
       opacity: 1;
     }
   }
-  
+  @media (max-width: 1390px) {
+    .img-container .help-message {
+      white-space: normal;
+      max-width: 90vw;  // Assicurati che la help-message non superi il 90% della larghezza dello schermo
+    }
+  }
+
 }
 </style>
