@@ -2,12 +2,12 @@
   <h3 class="text-center fw-bold">
     PROGETTI
   </h3>
-  <ul class="d-flex justify-content-center my-4 flex-wrap">
-    <li><button @click="setFilter('')">All</button></li>
-    <li><button @click="setFilter('Front End')">Front End</button></li>
-    <li><button @click="setFilter('Back End')">Back End</button></li>
-    <li><button @click="setFilter('Full Stack')">Full Stack</button></li>
-  </ul>
+  <div class="row justify-content-center my-4">
+    <button @click="setFilter('')" class="col-lg-3 col-sm-6 col-12">All</button>
+    <button @click="setFilter('Front End')"  class="col-lg-3 col-sm-6 col-12">Front End</button>
+    <button @click="setFilter('Back End')"  class="col-lg-3 col-sm-6 col-12">Back End</button>
+    <button @click="setFilter('Full Stack')"  class="col-lg-3 col-sm-6 col-12">Full Stack</button>
+  </div>
   <transition-group name="project" tag="div" class="projects-container row">
     <div v-for="(project, index) in filteredProjects" :key="project.name" class="card m-2 col-lg-3 col-sm-4 col-8">
       <img :src="project.src" :alt="project.alt" class="project-img"/>
@@ -75,6 +75,7 @@ button {
   border: 3px solid var(--saffron);
   margin: 5px;
   width: 150px;
+  min-width: 150px;
   color: var(--alabaster);
   border-radius: 10px;
   padding: 5px;
