@@ -6,6 +6,7 @@
         <a href="http://www.linkedin.com/in/giorgio-bolzoni"><img src="/img/linkedin-svgrepo-com.svg" alt="logo-linkedin" class="rounded-3" id="linkedin-logo"></a>
         <a href="https://drive.google.com/file/d/1ey1k3Bs23R0Hlwaf1Bp0Qqf7SKQKjiYW/view?usp=sharing"><img src="/img/cv-logo.png" alt="logo-cv" class="rounded-circle"></a>
       </section>
+      <p class="mx-3"><i class="fa-solid fa-location-dot fs-4 me-3" style="color: #ffffff;"></i>Milano, Italy</p>
       <p class="py-3 d-flex align-items-center" id="email"><i class="fa-regular fa-envelope fs-4" style="color: #ffffff;"></i> <a class="mx-3">gbolzoni96@gmail.com</a></p>
     </div>
     <div class="text-center copyright pb-4">
@@ -64,6 +65,9 @@
       color: var(--saffron);
     }
   }
+}
+p{
+  color: var(--light-platinum);
 }
 .copyright{
   color: var(--light-platinum);
