@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg px-4 flex-wrap" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg px-4" data-bs-theme="dark">
     <div class="container-fluid">
-      <router-link class="navbar-brand mb-0 h1 me-5" to="/">
-        <h2 class="fw-bold">Giorgio Bolzoni</h2>
+      <router-link class="navbar-brand mb-0 h1 me-5" to="/#top">
+        <h2 class="fw-bold text-wrap">Giorgio Bolzoni</h2>
       </router-link>
       <div class="img-container">
         <img src="/img/duck.png" style="width: 100px;" alt="duck.png">
@@ -72,7 +72,7 @@ nav {
     position: relative;
     display: inline-block;
     cursor: help;
-
+    
     .help-message {
       display: none;
       position: absolute;

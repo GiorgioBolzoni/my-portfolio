@@ -27,6 +27,7 @@
       <div>
         <p class="card-text px-2 mx-2 fw-bold">{{ project.technology }}</p>
       </div>
+      <button class="go-to-site-button" @click="goToSite(project.site)">Vai al sito</button>
     </div>
   </transition-group>
 </template>
@@ -37,16 +38,16 @@ export default {
   data() {
     return {
       projects: [
-        {name: 'Deliveroo', stack: 'Full Stack', src: '/my-portfolio/img/deliveboo.gif', alt: 'deliveboo.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/giuliamari04/Deliveboo', link2: 'https://github.com/leonardomastrangelo/laravel_deliveboo'},
-        {name: 'Booleansgate', stack: 'Full Stack', src: '/my-portfolio/img/booleansgate.gif', alt: 'booleansgate.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/Eecodev/vite-booleansgate', link2: 'https://github.com/giovannimegliola/booleansgate'},
-        {name: 'Tic Tac Toe', stack: 'Front End', src: '/my-portfolio/img/tris.gif', alt: 'tic-tac-toe.gif', technology: 'React | CSS', link: 'https://github.com/GiorgioBolzoni/02-tic-tac-toe-starting-project'},
-        {name: 'Project Management', stack: 'Front End', src: '/my-portfolio/img/proj-management.gif', alt: 'proj-management.gif', technology: 'React | Tailwind', link: 'https://github.com/GiorgioBolzoni/06-projects-management-application'},
-        {name: 'Gobike', stack: 'Front End', src: '/my-portfolio/img/bike.gif', alt: 'gobike.gif', technology: 'Vue.js | Sass | Bootstrap | API', link: 'https://github.com/GiorgioBolzoni/proj-html-vuejs'},
-        {name: 'Pokédex', stack: 'Front End', src: '/my-portfolio/img/pokedex.gif', alt: 'pokedex.gif', technology: 'Vue.js | Sass | Bootstrap | Axios', link: 'https://github.com/GiorgioBolzoni/vue-pokedex'},
-        {name: 'Spotify Web', stack: 'Front End', src: '/my-portfolio/img/spotify.png', alt: 'spotify_img', technology: 'HTML | CSS', link: 'https://github.com/GiorgioBolzoni/html-css-spotifyweb'},        
-        {name: 'Netflix', stack: 'Front End', src: '/my-portfolio/img/boolflix.gif', alt: 'boolflix.gif', technology: 'Vue.js | Vuex | API', link: 'https://github.com/GiorgioBolzoni/vite-boolflix'},
-        {name: 'Whatsapp', stack: 'Front End', src: '/my-portfolio/img/whatsapp.png', alt: 'whatsapp_img', technology: 'HTML | CSS | JavaScript', link: 'https://github.com/GiorgioBolzoni/vue-boolzapp'},
-        {name: 'Comics', stack: 'Back End', src: '/my-portfolio/img/comics.png', alt: 'comics_img', technology: 'PHP | Laravel | Sass | API', link: 'https://github.com/GiorgioBolzoni/laravel-comics' },
+        {name: 'Deliveroo', stack: 'Full Stack', src: '/my-portfolio/img/deliveboo.gif', alt: 'deliveboo.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/giuliamari04/Deliveboo', link2: 'https://github.com/leonardomastrangelo/laravel_deliveboo', site: ''},
+        {name: 'Booleansgate', stack: 'Full Stack', src: '/my-portfolio/img/booleansgate.gif', alt: 'booleansgate.gif', technology: 'Vue.js | Laravel | MySql | Sass | Bootstrap | Axios', link: 'https://github.com/Eecodev/vite-booleansgate', link2: 'https://github.com/giovannimegliola/booleansgate', site: ''},
+        {name: 'Tic Tac Toe', stack: 'Front End', src: '/my-portfolio/img/tris.gif', alt: 'tic-tac-toe.gif', technology: 'React | CSS', link: 'https://github.com/GiorgioBolzoni/02-tic-tac-toe-starting-project', site: 'https://66852b1b9cd465e47d766bf4--tic-tac-toe-giorgio-bolzoni.netlify.app/'},
+        {name: 'Project Management', stack: 'Front End', src: '/my-portfolio/img/proj-management.gif', alt: 'proj-management.gif', technology: 'React | Tailwind', link: 'https://github.com/GiorgioBolzoni/06-projects-management-application', site: 'https://the-projects-management-app.netlify.app/'},
+        {name: 'Gobike', stack: 'Front End', src: '/my-portfolio/img/bike.gif', alt: 'gobike.gif', technology: 'Vue.js | Sass | Bootstrap | API', link: 'https://github.com/GiorgioBolzoni/proj-html-vuejs', site: 'https://app.netlify.com/sites/gobike/overview'},
+        {name: 'Pokédex', stack: 'Front End', src: '/my-portfolio/img/pokedex.gif', alt: 'pokedex.gif', technology: 'Vue.js | Sass | Bootstrap | Axios', link: 'https://github.com/GiorgioBolzoni/vue-pokedex', site: 'https://pokedex-giorgio-bolzoni.netlify.app'},
+        {name: 'Spotify Web', stack: 'Front End', src: '/my-portfolio/img/spotify.png', alt: 'spotify_img', technology: 'HTML | CSS', link: 'https://github.com/GiorgioBolzoni/html-css-spotifyweb', site: 'https://spotify-web-giorgio-bolzoni.netlify.app/'},        
+        {name: 'Netflix', stack: 'Front End', src: '/my-portfolio/img/boolflix.gif', alt: 'boolflix.gif', technology: 'Vue.js | Vuex | API', link: 'https://github.com/GiorgioBolzoni/vite-boolflix', site: 'https://boolflix-giorgio-bolzoni.netlify.app'},
+        {name: 'Whatsapp', stack: 'Front End', src: '/my-portfolio/img/whatsapp.png', alt: 'whatsapp_img', technology: 'HTML | CSS | JavaScript', link: 'https://github.com/GiorgioBolzoni/vue-boolzapp', site: 'https://boolzapp-giorgio-bolzoni.netlify.app'},
+        {name: 'Comics', stack: 'Back End', src: '/my-portfolio/img/comics.png', alt: 'comics_img', technology: 'PHP | Laravel | Sass | API', link: 'https://github.com/GiorgioBolzoni/laravel-comics', site: '' },
       ],
       filter: ''
     }
@@ -62,6 +63,13 @@ export default {
   methods: {
     setFilter(filter) {
       this.filter = filter;
+    },
+    goToSite(site) {
+      if (site) {
+        window.open(site, "_blank");
+      } else {
+        alert('Il sito sarà disponibile a breve');
+      }
     }
   }
 }
@@ -118,6 +126,11 @@ button {
 
     img {
       opacity: 0.8;
+    }
+
+    .go-to-site-button {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
@@ -216,5 +229,22 @@ button {
 
 .project-move {
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.go-to-site-button {
+  position: absolute;
+  bottom: 50%;
+  right: 25%;
+  transform: translate(-50%, -50%) translateY(10px);
+  opacity: 0;
+  background-color: var(--saffron);
+  color: var(--eerie-black);
+  border: none;
+  box-shadow: 3px 3px 8px black;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.4s ease-out;
 }
 </style>
